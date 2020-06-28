@@ -1,0 +1,48 @@
+import refresh from '../img/refresh.svg';
+const htmlLocal = (body) => {
+    const firstgroup = document.createElement('section');
+    firstgroup.setAttribute('id', 'firstgroup');
+    const section = document.createElement('section');
+    section.setAttribute('id', 'container');
+    const imgRec = document.createElement('img');
+    imgRec.src = refresh;
+    imgRec.setAttribute('class', 'imgRec');
+    const button = document.createElement('button');
+    button.setAttribute('id', 'changeColor');
+    button.setAttribute('class', 'hoverBlue');
+    button.appendChild(imgRec);
+    const btnFar = document.createElement('button');
+    btnFar.setAttribute('id', 'btnFar');
+    btnFar.setAttribute('class', 'hoverBlue');
+    btnFar.innerText = '°F';
+    const btnCel = document.createElement('button');
+    btnCel.setAttribute('id', 'btnCel');
+    btnCel.setAttribute('class', 'hoverBlue');
+    btnCel.innerText = '°C';
+    const sectionInput = document.createElement('section');
+    sectionInput.setAttribute('id', 'searchInput')
+    const input = document.createElement('input');
+    input.setAttribute('id', 'location');
+    input.setAttribute('type', 'text');
+    const butnSearch = document.createElement('button');
+    butnSearch.setAttribute('id', 'setWeather');
+    butnSearch.innerText = 'Search';
+    const sectionSecond = document.createElement('section');
+    sectionSecond.setAttribute('id', 'title');
+    const countryCity = document.createElement('h1');
+    countryCity.setAttribute('id', 'countryCity');
+    const date = document.createElement('p');
+    date.setAttribute('id', 'date');
+    firstgroup.appendChild(section);
+    firstgroup.appendChild(sectionInput);
+    section.appendChild(button);
+    section.appendChild(btnFar);
+    section.appendChild(btnCel);
+    sectionInput.appendChild(input);
+    sectionInput.appendChild(butnSearch);
+    sectionSecond.appendChild(countryCity);
+    sectionSecond.appendChild(date);
+    body.appendChild(firstgroup);
+    body.appendChild(sectionSecond);
+}
+export default htmlLocal;
